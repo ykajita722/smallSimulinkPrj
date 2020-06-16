@@ -16,3 +16,9 @@ jobs:
           path: test-results
       - codecov/upload:
           file: code-coverage/coverage.xml
+      - store_artifacts:
+          path: test-results
+          destination: test-results/matlab/results.xml
+      - store_artifacts:
+          path: code-coverage
+          destination: code-coverage/coverage.xml
